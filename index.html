@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKpromo</title>
+</head>
+
+    <script>
+        async function fetchKeys() {
+            const response = await fetch('https://elimbek.github.io/keys.json');
+            const keys = await response.json();
+            document.getElementById('key-container').innerText = keys.join('\n');
+        }
+
+        fetchKeys();
+    </script>
+</body>
+</html>
